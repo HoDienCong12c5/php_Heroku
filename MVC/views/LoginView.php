@@ -74,7 +74,7 @@
 				else{
 					$.ajax({
 						type: "post",
-						url:"./Login/Check",
+						url:"Login/Check",
 						data: {
 							account:account,
 							password:password
