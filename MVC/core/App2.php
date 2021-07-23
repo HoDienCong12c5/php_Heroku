@@ -12,15 +12,13 @@
             if($arr[0]=="Admin"){ 
                 unset($arr[0]);
                 $arr = array_values($arr);
-                $this->controller = "ListWork";
-                
+                $this->controller = "ListWork"; 
                  if (!empty($arr[0])) {
                     $this->controller = ucfirst($arr[0]);
                 }
                 if (file_exists('MVC/controllers/Admin/'.($this->controller). '.php')) { 
                     require_once 'MVC/controllers/Admin/'.($this->controller). '.php'; 
-                    //kiểm tra class this->controllers
-                    echo "Vào admin";
+                    //kiểm tra class this->controllers 
                     if (class_exists($this->controller)) { 
                         $this->controller = new $this->controller();
                     } else { 
@@ -29,11 +27,19 @@
                     unset($arr[0]);
                 }
             }
-                /*if(file_exists("MVC/controllers/".$arr[0].".php"))
+            else{
+                 if(file_exists("MVC/controllers/".$arr[0].".php"))
                 {
                     $this->controller = $arr[0];
                     unset($arr[0]);
-                } */
+                    require_once "MVC/controllers/".$this->controller.".php";
+                      if (class_exists($this->controller)) { 
+                            $this->controller = new $this->controller();
+                        } else { 
+                            $this->loadError();
+                        }
+                } 
+            } 
             
         }
         else{
