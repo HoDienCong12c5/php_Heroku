@@ -201,7 +201,7 @@ function currency_format($number, $suffix = '')
 
                         $.ajax({
                             type: "POST",
-                            url: "ProductRevenue/getTheoNgay",
+                            url: "Admin/ProductRevenue/getTheoNgay",
                             data: {
                                 "ngBegin": ngBegin,
                                 "ngEnd": ngEnd,
