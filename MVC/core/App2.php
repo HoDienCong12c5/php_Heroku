@@ -8,15 +8,19 @@
     { 
         $arr = $this->UrlProcess();  
         print_r($arr);
-        /*if($arr !=NULL)
+        if($arr !=NULL)
         {  
-                if(file_exists("MVC/controllers/".$arr[0].".php"))
+            if($arr[0]=="Admin"){
+                echo "Vào admin";
+            }
+                /*if(file_exists("MVC/controllers/".$arr[0].".php"))
                 {
                     $this->controller = $arr[0];
                     unset($arr[0]);
-                } 
+                } */
             
         }
+        /*
         require_once "MVC/controllers/".$this->controller.".php";
         $this->controller = new $this->controller;
         if(isset($arr[1]))
