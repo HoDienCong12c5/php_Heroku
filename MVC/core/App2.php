@@ -12,6 +12,9 @@
         {  
             if($arr[0]=="Admin"){
                 echo "Vào admin";
+                unset($arr[0]);
+                $arr = array_values($arr);
+                print_r($arr);
             }
                 /*if(file_exists("MVC/controllers/".$arr[0].".php"))
                 {
