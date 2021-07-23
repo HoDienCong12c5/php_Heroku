@@ -9,7 +9,7 @@ class DB
     protected $server = "us-cdbr-east-04.cleardb.com";
     protected $username  = "b742d22273447b";
     protected $password = "8eef9c7a";
-    protected $dbname = "heroku_c46d7c7d7c4e25";
+    protected $dbname = "heroku_c46d7c7d7c4e255";
     function __construct()
     {
         $this->con = mysqli_connect(
