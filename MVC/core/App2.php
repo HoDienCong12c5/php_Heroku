@@ -9,8 +9,7 @@
         $arr = $this->UrlProcess(); 
         if($arr !=NULL)
         {  
-            if($arr[0]=="Admin"){
-                
+            if($arr[0]=="Admin"){ 
                 unset($arr[0]);
                 $arr = array_values($arr);
                 $this->controller = "ListWork";
@@ -18,17 +17,13 @@
                  if (!empty($arr[0])) {
                     $this->controller = ucfirst($arr[0]);
                 }
-                if (file_exists('MVC/controllers/Admin/'.($this->controller). '.php')) {
-                    
+                if (file_exists('MVC/controllers/Admin/'.($this->controller). '.php')) { 
                     require_once 'MVC/controllers/Admin/'.($this->controller). '.php'; 
                     //kiểm tra class this->controllers
                     echo "Vào admin";
-                    if (class_exists($this->controller)) {
-                        print_r($arr);
-                        echo $this->controller ;
+                    if (class_exists($this->controller)) { 
                         $this->controller = new $this->controller();
-                    } else {
-                        //echo "lỗi rồi";
+                    } else { 
                         $this->loadError();
                     }
                     unset($arr[0]);
@@ -41,9 +36,10 @@
                 } */
             
         }
-        
-        require_once "MVC/controllers/".$this->controller.".php";
-        $this->controller = new $this->controller();
+        else{
+            require_once "MVC/controllers/".$this->controller.".php";
+            $this->controller = new $this->controller();
+        } 
         
         if(isset($arr[1]))
         { 
