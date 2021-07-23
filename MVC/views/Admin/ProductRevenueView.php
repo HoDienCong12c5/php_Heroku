@@ -126,7 +126,7 @@ function currency_format($number, $suffix = '')
     <script src="/Public/All/js/jQuery.js"></script>
     <script>
         function ViewRevenue() {
-            $.post("/Admin/ProductRevenue/Chartt",
+            $.post("Admin/ProductRevenue/Chartt",
                 function(msg) {
                     $("#totalR").html(msg);
                     arr = <?= ProductRevenue::Chart()?>;
@@ -161,7 +161,7 @@ function currency_format($number, $suffix = '')
         function view() {
             $.ajax({
                 type: "POST",
-                url: "/Admin/ProductRevenue/getDS",
+                url: "Admin/ProductRevenue/getDS",
                 success: function(msg) {
                     $("#billFood").html(msg);
                 }
@@ -173,7 +173,7 @@ function currency_format($number, $suffix = '')
             var d2 = new Date($("#ngEnd").val());
             var ngBegin = $("#ngBegin").val();
             var ngEnd = $("#ngEnd").val();
-            $.post("/Admin/ProductRevenue/DoanhThu", {
+            $.post("Admin/ProductRevenue/DoanhThu", {
                     ngBegin: ngBegin,
                     ngEnd: ngEnd
                 },
@@ -201,7 +201,7 @@ function currency_format($number, $suffix = '')
 
                         $.ajax({
                             type: "POST",
-                            url: "./ProductRevenue/getTheoNgay",
+                            url: "ProductRevenue/getTheoNgay",
                             data: {
                                 "ngBegin": ngBegin,
                                 "ngEnd": ngEnd,
@@ -226,7 +226,7 @@ function currency_format($number, $suffix = '')
         function delet(id) {
             $.ajax({
                 type: "POST",
-                url: "/Admin/ProductRevenue/getDetail",
+                url: "Admin/ProductRevenue/getDetail",
                 data: {
                     "id": id
                 },
