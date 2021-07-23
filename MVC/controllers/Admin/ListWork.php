@@ -6,8 +6,8 @@ class ListWork extends Controller{
             $this->model = new EditWorkModel();
     }
     public function index(){
-        if(isset($_SESSION['user_id']) == false)
-            header ('Location:/Home');
+        //if(isset($_SESSION['user_id']) == false)
+            //header ('Location:/Home');
         $work=$this->modelAdmin("EditWorkModel");
         $this->viewAdmin('ListWordView',[
             "data"=>$work->getList()
