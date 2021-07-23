@@ -182,7 +182,7 @@
 
                             },
                             function(msg) {
-                                if (msg == '') {
+                                if (msg.length<3) {
                                     alert("Thanh toán thành công");
                                     $("#card").html("");
                                     View();
