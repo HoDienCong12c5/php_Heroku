@@ -25,7 +25,8 @@
                     echo "Vào admin";
                     if (class_exists($this->controller)) {
                         print_r($arr);
-                        $this->controller = new $this->controller;
+                        echo $this->controller ;
+                        $this->controller = new $this->controller();
                     } else {
                         //echo "lỗi rồi";
                         $this->loadError();
