@@ -10,7 +10,7 @@
         if($arr !=NULL)
         {  
             if($arr[0]=="Admin"){
-                echo "Vào admin";
+                
                 unset($arr[0]);
                 $arr = array_values($arr);
                 $this->controller = "ListWork";
@@ -19,10 +19,12 @@
                     $this->controller = ucfirst($arr[0]);
                 }
                 if (file_exists('MVC/controllers/Admin/'.($this->controller). '.php')) {
-                    print_r($arr);
+                    
                     require_once 'MVC/controllers/Admin/'.($this->controller). '.php'; 
                     //kiểm tra class this->controllers
+                    echo "Vào admin";
                     if (class_exists($this->controller)) {
+                        print_r($arr);
                         $this->controller = new $this->controller;
                     } else {
                         //echo "lỗi rồi";
