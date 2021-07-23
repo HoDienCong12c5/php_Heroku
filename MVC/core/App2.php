@@ -14,12 +14,13 @@
                 unset($arr[0]);
                 $arr = array_values($arr);
                 $this->controller = "ListWork";
-                print_r($arr);
+                
                  if (!empty($arr[0])) {
                     $this->controller = ucfirst($arr[0]);
                 }
-                if (file_exists('MVC/controllers/Admin/' . ($this->controller) . '.php')) {
-                    require_once 'MVC/controllers/Admin/' . ($this->controller) . '.php'; 
+                if (file_exists('MVC/controllers/Admin/'.($this->controller). '.php')) {
+                    print_r($arr);
+                    require_once 'MVC/controllers/Admin/'.($this->controller). '.php'; 
                     //kiểm tra class this->controllers
                     if (class_exists($this->controller)) {
                         $this->controller = new $this->controller;
