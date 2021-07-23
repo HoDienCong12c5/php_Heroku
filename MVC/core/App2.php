@@ -7,7 +7,8 @@
     function __construct()
     { 
         $arr = $this->UrlProcess();  
-        if($arr !=NULL)
+        print_r($arr);
+        /*if($arr !=NULL)
         {  
                 if(file_exists("MVC/controllers/".$arr[0].".php"))
                 {
@@ -27,7 +28,7 @@
             unset($arr[1]);
         }
         $this->paramas = $arr?array_values($arr):[];
-        call_user_func_array([$this->controller,$this->action],$this->paramas);
+        call_user_func_array([$this->controller,$this->action],$this->paramas);*/
     }
     function UrlProcess()
     {
