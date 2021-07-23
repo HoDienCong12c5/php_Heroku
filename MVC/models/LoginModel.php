@@ -16,7 +16,7 @@ class LoginModel extends DB{
                 return 1;
             else{
                 $sql="SELECT a.FullName from account a where a.ID =$idP";
-                
+                $_SESSION['fullName']=$this->getIDContent($sql);
                 $sql ="SELECT k.Discount from account a, kindcustomer k where a.IDTypeCustomer=k.ID and a.ID=$idP"; 
                 $_SESSION['discount_user']=$this->getIDContent($sql);  
                 return 0;
