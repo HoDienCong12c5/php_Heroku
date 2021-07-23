@@ -6,15 +6,29 @@
     protected $paramas = [];
     function __construct()
     { 
-        $arr = $this->UrlProcess();  
-        print_r($arr);
+        $arr = $this->UrlProcess(); 
         if($arr !=NULL)
         {  
             if($arr[0]=="Admin"){
                 echo "Vào admin";
                 unset($arr[0]);
                 $arr = array_values($arr);
+                $this->controller = "ListWork";
                 print_r($arr);
+                 if (!empty($arr[0])) {
+                    $this->controller = ucfirst($arr[0]);
+                }
+                if (file_exists('MVC/controllers/Admin/' . ($this->controller) . '.php')) {
+                    require_once 'MVC/controllers/Admin/' . ($this->controller) . '.php'; 
+                    //kiểm tra class this->controllers
+                    if (class_exists($this->controller)) {
+                        $this->controller = new $this->controller;
+                    } else {
+                        //echo "lỗi rồi";
+                        $this->loadError();
+                    }
+                    unset($arr[0]);
+                }
             }
                 /*if(file_exists("MVC/controllers/".$arr[0].".php"))
                 {
