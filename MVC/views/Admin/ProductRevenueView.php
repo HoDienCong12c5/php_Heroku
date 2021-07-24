@@ -123,13 +123,41 @@ function currency_format($number, $suffix = '')
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="/Public/All/js/jQuery.js"></script>
-    <script src="/Public/All/js/bootrap.bunlder.min.js"></script>
-    <script src="/Public/Admin/js/chart.js"></script>
-    <script src="/Public/Admin/js/chartNew.js"></script>
+    <script src="https://nhom-9.herokuapp.com/Public/All/js/jQuery.js"></script>
+    <script src="https://nhom-9.herokuapp.com/Public/All/js/bootrap.bunlder.min.js"></script>
+    <script src="https://nhom-9.herokuapp.com/Public/Admin/js/chart.js"></script>
+    <script src="https://nhom-9.herokuapp.com/Public/Admin/js/chartNew.js"></script>
     <script>
         function ViewRevenue() {
-            
+            $.post("",
+                function() {
+                    var arr = <?= json_encode(ProductRevenue::Chart()) ?>;
+                    const ctx = document.getElementById("chart").getContext('2d');
+                    const myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4",
+                                "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
+                            ],
+                            datasets: [{
+                                label: 'food Items',
+                                backgroundColor: 'rgba(161, 198, 247, 1)',
+                                borderColor: 'rgb(47, 128, 237)',
+                                data: arr,
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true,
+                                    }
+                                }]
+                            }
+                        },
+                    });
+                }
+            )
         }
 
         function view() {
