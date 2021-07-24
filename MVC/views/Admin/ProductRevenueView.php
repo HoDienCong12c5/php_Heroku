@@ -126,10 +126,9 @@ function currency_format($number, $suffix = '')
     <script src="Public/All/js/jQuery.js"></script>
     <script>
         function ViewRevenue() {
-            $.post("Admin/ProductRevenue/Chart",
-                function(msg) {
-                    $("#totalR").html(msg);
-                    var arr = <?= ProductRevenue::Chart()?>;
+            $.post("",
+                function() {
+                    var arr = <?= json_encode(ProductRevenue::Chart()) ?>;
                     const ctx = document.getElementById("chart").getContext('2d');
                     const myChart = new Chart(ctx, {
                         type: 'bar',
