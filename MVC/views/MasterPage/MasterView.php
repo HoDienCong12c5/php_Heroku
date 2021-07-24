@@ -12,14 +12,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <!-- Prism Syntax Highlighting-->
-    <link href="/Public/Admin/css/toolbar.css" rel="stylesheet">
+    <link href="https://nhom-9.herokuapp.com/Public/Admin/css/toolbar.css" rel="stylesheet">
 
-    <link href="/Public/Admin/css/prism-okaidia.css" rel="stylesheet">
+    <link href="https://nhom-9.herokuapp.com/Public/Admin/css/prism-okaidia.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/img/favicon.png">
-    <link href="/Public/Admin/css/Boostrap.min.css" rel="stylesheet">
-    <link href="/Public/font/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Public/All/css/font.css" rel="stylesheet">
-    <link href="/Public/Admin/css/Chart.css" rel="stylesheet">
+    <link href="https://nhom-9.herokuapp.com/Public/Admin/css/Boostrap.min.css" rel="stylesheet">
+    <link href="https://nhom-9.herokuapp.com/Public/font/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://nhom-9.herokuapp.com/Public/All/css/font.css" rel="stylesheet">
+    <link href="https://nhom-9.herokuapp.com/Public/Admin/css/Chart.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -166,9 +166,9 @@
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <!-- Data Tables-->
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
-        <script src="/Public/All/js/Admin1.js"></script>
+        <script src="https://nhom-9.herokuapp.com/Public/All/js/Admin1.js"></script>
         <!-- Main Theme JS File-->
-        <script src="/Public/All/js/Admin2.js"></script>
+        <script src="https://nhom-9.herokuapp.com/Public/All/js/Admin2.js"></script>
         <!-- Prism for syntax highlighting-->
         <script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/prism.js"></script>
         <script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
