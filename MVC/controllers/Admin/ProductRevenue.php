@@ -13,6 +13,7 @@
             ]);
         }
         public static function Chart(){ 
+           echo "vô đồ thị";
            if($bf=$this->modelAdmin("ProductRevenueModel")) 
               echo"đã có đồ thị";
                 return  $bf->ChartR();
