@@ -129,35 +129,7 @@ function currency_format($number, $suffix = '')
     <script src="/Public/Admin/js/chartNew.js"></script>
     <script>
         function ViewRevenue() {
-            $.post("",
-                function() {
-                    var arr = <?= json_encode(ProductRevenue::Chart()) ?>;
-                    const ctx = document.getElementById("chart").getContext('2d');
-                    const myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4",
-                                "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
-                            ],
-                            datasets: [{
-                                label: 'food Items',
-                                backgroundColor: 'rgba(161, 198, 247, 1)',
-                                borderColor: 'rgb(47, 128, 237)',
-                                data: arr,
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true,
-                                    }
-                                }]
-                            }
-                        },
-                    });
-                }
-            )
+            
         }
 
         function view() {
