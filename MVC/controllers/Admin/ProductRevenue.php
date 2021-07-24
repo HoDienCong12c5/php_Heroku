@@ -13,17 +13,8 @@
             ]);
         }
         public  function Chart(){
-           if($bf=$this->modelAdmin("ProductRevenueModel")){
-                echo"đã có đồ thị";
-                  print_r($bf->ChartR()) ;
-                return  $bf->ChartR();
-           }
-              
-           else{ 
-              echo "rỗng";
-              return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
-           }
-            
+           $bf=$this->modelAdmin("ProductRevenueModel");
+           return  $bf->ChartR(); 
         }
 
         public function getDS(){
