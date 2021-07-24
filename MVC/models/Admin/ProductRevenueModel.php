@@ -33,7 +33,7 @@ class ProductRevenueModel extends DB
             array_push($arrRe,$s);
             $s=0;
         }
-        return json_encode($arrRe);
+        return $arrRe;
     }
     public function CheckM($date, $month)
     {
