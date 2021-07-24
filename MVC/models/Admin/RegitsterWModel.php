@@ -17,7 +17,7 @@
             $d=$this->getList();
             $i=0;
             if($dN==1){
-                $date= date('d/m/Y');
+                $date= date('d-m-Y');
                 while($r=mysqli_fetch_array($d)){
                     if(strtotime($date)== strtotime($r[3])){
                         $money=$this->currency_format($r[5]);
