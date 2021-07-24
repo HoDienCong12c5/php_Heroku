@@ -15,8 +15,7 @@
         public static function Chart(){ 
            if($bf=ProductRevenue::modelAdmin("ProductRevenueModel")) 
                 return  $bf->ChartR();
-           else{
-              echo "ko có gì";
+           else{ 
               return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
            }
             
