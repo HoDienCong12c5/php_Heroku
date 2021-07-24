@@ -123,7 +123,10 @@ function currency_format($number, $suffix = '')
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="Public/All/js/jQuery.js"></script>
+    <script src="/Public/All/js/jQuery.js"></script>
+    <script src="/Public/All/js/bootrap.bunlder.min.js"></script>
+    <script src="/Public/Admin/js/chart.js"></script>
+    <script src="/Public/Admin/js/chartNew.js"></script>
     <script>
         function ViewRevenue() {
             $.post("",
@@ -235,9 +238,7 @@ function currency_format($number, $suffix = '')
             })
         }
     </script>
-    <script src="/Public/All/js/bootrap.bunlder.min.js"></script>
-    <script src="/Public/Admin/js/chart.js"></script>
-    <script src="/Public/Admin/js/chartNew.js"></script>
+    
 </body>
 
 </html>
