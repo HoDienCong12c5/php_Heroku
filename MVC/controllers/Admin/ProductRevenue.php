@@ -18,6 +18,7 @@
               echo"đã có đồ thị";
                 return  $bf->ChartR();
            else{ 
+              echo "rỗng";
               return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
            }
             
