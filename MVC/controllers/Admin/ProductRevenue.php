@@ -14,8 +14,12 @@
         }
         public static function Chart(){ 
            if($bf=ProductRevenue::modelAdmin("ProductRevenueModel")) 
-                return  $bf->ChartR(); 
-            return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
+                return  $bf->ChartR();
+           else{
+              echo "ko có gì";
+              return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
+           }
+            
         }
 
         public function getDS(){
