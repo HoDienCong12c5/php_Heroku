@@ -14,6 +14,7 @@
         }
         public static function Chart(){
             $bf=ProductRevenue::modelAdmin("ProductRevenueModel"); 
+           echo $bf->ChartR(); 
             return  $bf->ChartR();  
         }
 
