@@ -19,8 +19,7 @@
 
         public function getDS(){
             $bf=$this->modelAdmin("ProductRevenueModel");
-            $ds=$bf->getBILLTP();
-            echo "đãm vô";
+            $ds=$bf->getBILLTP(); 
                 while($data=mysqli_fetch_array($ds)){
                     $money= $this->currency_format($data[3]);
                     echo "<tr class='align-middle'>
