@@ -13,7 +13,8 @@
             ]);
         }
         public static function Chart(){ 
-           if($bf=ProductRevenue::modelAdmin("ProductRevenueModel")) 
+           if($bf=selft::modelAdmin("ProductRevenueModel")) 
+              echo"đã có đồ thị";
                 return  $bf->ChartR();
            else{ 
               return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
