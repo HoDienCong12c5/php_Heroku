@@ -15,6 +15,7 @@
         public  function Chart(){
            if($bf=$this->modelAdmin("ProductRevenueModel")){
                 echo"đã có đồ thị";
+              echo $bf->ChartR();
                 return  $bf->ChartR();
            }
               
