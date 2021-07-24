@@ -12,12 +12,10 @@
                 "dsbill"=> $dt->getBILLTP(),
             ]);
         }
-        public static function Chart(){
-           echo "đã vào";
-            /*$bf=ProductRevenue::modelAdmin("ProductRevenueModel"); 
-           echo $bf->ChartR(); 
-           echo "đã cáo đồ thị";
-            return  $bf->ChartR();  */
+        public static function Chart(){ 
+           if($bf=ProductRevenue::modelAdmin("ProductRevenueModel")) 
+                return  $bf->ChartR(); 
+            return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
         }
 
         public function getDS(){
