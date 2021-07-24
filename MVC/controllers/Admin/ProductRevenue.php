@@ -13,7 +13,7 @@
             ]);
         }
         public static function Chart(){ 
-           if($bf=selft::modelAdmin("ProductRevenueModel")) 
+           if($bf=$this->modelAdmin("ProductRevenueModel")) 
               echo"đã có đồ thị";
                 return  $bf->ChartR();
            else{ 
