@@ -13,10 +13,11 @@
             ]);
         }
         public static function Chart(){
-            $bf=ProductRevenue::modelAdmin("ProductRevenueModel"); 
+           echo "đã vào";
+            /*$bf=ProductRevenue::modelAdmin("ProductRevenueModel"); 
            echo $bf->ChartR(); 
            echo "đã cáo đồ thị";
-            return  $bf->ChartR();  
+            return  $bf->ChartR();  */
         }
 
         public function getDS(){
