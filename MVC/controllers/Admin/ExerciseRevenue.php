@@ -82,15 +82,16 @@
             $ngKT = date($_POST['ngEnd']);
             $bf=$this->modelAdmin("ExerciseRevenueModel");
             $ds=$bf->getDSBT(); 
+            $total=0;
             while($data=mysqli_fetch_array($ds)){
                 $datetime3= date_format(date_create_from_format('d/m/Y', $data[4]), 'Y-m-d');
 
                 if(strtotime($ngBD)<= strtotime($datetime3) && strtotime($ngKT)>= strtotime($data[4]) ){
-                    ExerciseRevenue::$dThu+=$data[3]; 
+                    $total+=$data[3]; 
                 } 
             }
             echo "Tổng doanh thu : ";
-            echo $this->currency_format(ExerciseRevenue::$dThu);
+            echo $this->currency_format($total);
         }
     }
 ?>
