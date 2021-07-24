@@ -15,6 +15,7 @@
         public static function Chart(){
             $bf=ProductRevenue::modelAdmin("ProductRevenueModel"); 
            echo $bf->ChartR(); 
+           echo "đã cáo đồ thị";
             return  $bf->ChartR();  
         }
 
