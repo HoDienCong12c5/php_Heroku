@@ -12,11 +12,12 @@
                 "dsbill"=> $dt->getBILLTP(),
             ]);
         }
-        public static function Chart(){ 
-           echo "vô đồ thị";
-           if($bf=$this->modelAdmin("ProductRevenueModel")) 
-              echo"đã có đồ thị";
+        public  function Chart(){
+           if($bf=$this->modelAdmin("ProductRevenueModel")){
+                echo"đã có đồ thị";
                 return  $bf->ChartR();
+           }
+              
            else{ 
               echo "rỗng";
               return "[0,0,0,0,0,0,0,0,0,0,0,0]"; 
