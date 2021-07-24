@@ -135,7 +135,7 @@ function currency_format($number, $suffix = '')
         function view() {
             $.ajax({
                 type: "POST",
-                url: "Admin/ProductRevenue/getDS",
+                url: "ProductRevenue/getDS",
                 success: function(msg) {
                     $("#billFood").html(msg);
                 }
@@ -147,7 +147,7 @@ function currency_format($number, $suffix = '')
             var d2 = new Date($("#ngEnd").val());
             var ngBegin = $("#ngBegin").val();
             var ngEnd = $("#ngEnd").val();
-            $.post("Admin/ProductRevenue/DoanhThu", {
+            $.post("ProductRevenue/DoanhThu", {
                     ngBegin: ngBegin,
                     ngEnd: ngEnd
                 },
@@ -175,7 +175,7 @@ function currency_format($number, $suffix = '')
 
                         $.ajax({
                             type: "POST",
-                            url: "Admin/ProductRevenue/getTheoNgay",
+                            url: "ProductRevenue/getTheoNgay",
                             data: {
                                 "ngBegin": ngBegin,
                                 "ngEnd": ngEnd,
@@ -200,7 +200,7 @@ function currency_format($number, $suffix = '')
         function delet(id) {
             $.ajax({
                 type: "POST",
-                url: "Admin/ProductRevenue/getDetail",
+                url: "ProductRevenue/getDetail",
                 data: {
                     "id": id
                 },
