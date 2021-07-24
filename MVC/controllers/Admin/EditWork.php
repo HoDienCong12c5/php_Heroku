@@ -1,6 +1,6 @@
 <?php
     class EditWork extends Controller{
-        public function _construct(){
+        public function __construct(){
             require_once "MVC/models/Admin/EditWorkModel.php";
             $this->model = new EditWorkModel();
         }
