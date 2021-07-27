@@ -10,7 +10,8 @@
 </head>
 <body>
     <?php
-        include "MVC/controllers/Admin/Master.php";
+    echo "đã lên giao diện";    
+    include "MVC/controllers/Admin/Master.php";
         $mt=new Master();
         $mt->index();
        
