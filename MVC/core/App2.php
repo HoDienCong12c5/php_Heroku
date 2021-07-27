@@ -11,7 +11,7 @@
         {  
             if($arr[0]=="Admin"){ 
                 print_r($arr);
-                /*unset($arr[0]);
+                unset($arr[0]);
                 $arr = array_values($arr);
                 $this->controller = "ListWork"; 
                  if (!empty($arr[0])) {
@@ -26,7 +26,7 @@
                         $this->loadError();
                     }
                     unset($arr[0]);
-                }*/
+                }
             }
             else{
                  if(file_exists("MVC/controllers/".$arr[0].".php"))
