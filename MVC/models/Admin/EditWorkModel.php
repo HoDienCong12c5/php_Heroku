@@ -1,6 +1,7 @@
 <?php 
 class EditWorkModel extends DB{  
     public function getDataWork($id){
+        echo "đã vào truy vấn";
         $sql="SELECT * from listWork where ID =$id";
         return $this->getData($sql);
     }
