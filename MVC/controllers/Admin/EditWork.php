@@ -3,6 +3,7 @@
         public function __construct(){
             require_once "MVC/models/Admin/EditWorkModel.php";
             $this->model = new EditWorkModel();
+            echo "đã vào";
         }
         public function index(){
             
