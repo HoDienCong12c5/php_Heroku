@@ -8,6 +8,7 @@
         public function index(){
             
             if(isset($_GET["idWork"])){
+                echo "vào chỗ có id";
                 $work=$this->modelAdmin("EditWorkModel");
                 $idW=$_GET["idWork"];
                 $this->viewAdmin("EditWorkView",[
