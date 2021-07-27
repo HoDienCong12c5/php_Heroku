@@ -11,6 +11,7 @@
                 echo "vào chỗ có id";
                 $work=$this->modelAdmin("EditWorkModel");
                 $idW=$_GET["idWork"];
+                echo $idW;
                 $this->viewAdmin("EditWorkView",[
                     "data"=>$work->getDataWork($idW),
                     "IDD"=>$work->getIDDevice()
