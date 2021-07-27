@@ -10,7 +10,6 @@
         if($arr !=NULL)
         {  
             if($arr[0]=="Admin"){ 
-                print_r($arr);
                 unset($arr[0]);
                 $arr = array_values($arr);
                 $this->controller = "ListWork"; 
