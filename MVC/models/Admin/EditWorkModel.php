@@ -3,6 +3,9 @@ class EditWorkModel extends DB{
     public function getDataWork($id){
         echo "đã vào truy vấn";
         $sql="SELECT * from listWork where ID =$id";
+        while($r=mysqli_fetch_array($this->getData($sql)) ){
+            print_r($r);
+        }
         return $this->getData($sql);
     }
     public function getList(){
