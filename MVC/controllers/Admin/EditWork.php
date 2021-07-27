@@ -3,7 +3,7 @@
         public function __construct(){
             require_once "MVC/models/Admin/EditWorkModel.php";
             $this->model = new EditWorkModel();
-            echo "đã vào";
+            
         }
         public function index(){
             
@@ -16,6 +16,7 @@
                 ]);
             }
             else{
+                echo "đã vào";
                 $work=$this->modelAdmin("EditWorkModel");
                 $this->viewAdmin("EditWorkView",[
                     "IDDe"=>$work->getIDDevice()
