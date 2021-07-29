@@ -6,10 +6,10 @@ class DB
     //pass :8eef9c7a
     //server old: localhost  / server new : us-cdbr-east-04.cleardb.com
     //name db new: heroku_c46d7c7d7c4e255 / name old : quanlyphonggym
-    protected $server = "us-cdbr-east-04.cleardb.com";
-    protected $username  = "b742d22273447b";
-    protected $password = "8eef9c7a";
-    protected $dbname = "heroku_c46d7c7d7c4e255";
+    protected $server = "eu-cdbr-west-01.cleardb.com";
+    protected $username  = "b548f6b1777ee8";
+    protected $password = "5a04dbc8";
+    protected $dbname = "heroku_cf82f1844882e8f";
     function __construct()
     {
         $this->con = mysqli_connect(
